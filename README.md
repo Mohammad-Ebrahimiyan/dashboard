@@ -9,7 +9,6 @@
 
 ## 📌 ویژگی‌ها
 
-<div dir="rtl">
 
  ⚛️ پیاده‌سازی با React + TypeScript  
  🎨 طراحی واکنش‌گرا با Material UI 6  
@@ -19,5 +18,18 @@
  ✅ فرم معتبرسازی‌شده با `react-hook-form + zod`  
  🚧 مدیریت خطاها با `ErrorBoundary`  
  💅 فونت سفارشی، استایلینگ تمیز با `styled()`
+---
 
-</div>
+### Run
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
