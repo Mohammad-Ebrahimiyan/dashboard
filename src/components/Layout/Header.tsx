@@ -5,6 +5,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { styled } from "@mui/material/styles";
 import SearchSection from "./SearchSection";
 import CategorySection from "./CategorySection";
+import { ThemeToggleButton } from "../UI/ThemeToggleButton";
 
 const StyledAppBar = styled(AppBar)(({theme}) => ({
   "&.MuiAppBar-root": {
@@ -38,6 +39,7 @@ const Header = () => {
               <PersonOutlineIcon />
               <KeyboardArrowDownIcon />
             </IconButton>
+            <ThemeToggleButton />
           </Box>
 
           <SearchSection />
