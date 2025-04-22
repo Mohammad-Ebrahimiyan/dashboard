@@ -2,21 +2,18 @@
 
 # 🏋️‍♀️ FitLand Dashboard
 
-پنل کاربری مدرن برای فروشگاه آنلاین فیت‌لند، طراحی‌شده با React, TypeScript و Material UI (MUI).  
-این داشبورد قابلیت نمایش اطلاعات کاربر، ویرایش پروفایل، حالت دارک/لایت، فرم‌ها و دسته‌بندی‌ها را ارائه می‌دهد.
+A modern admin panel for the FitLand online store, built with React, TypeScript, and Material UI (MUI).  
+This dashboard provides features like user information display, profile editing, dark/light mode toggle, forms, and product categories.
 
 ---
 
-## 📌 ویژگی‌ها
+## 📌 Features
 
-
- ⚛️ پیاده‌سازی با React + TypeScript  
- 🎨 طراحی واکنش‌گرا با Material UI 6  
- 🌙 پشتیبانی از دارک مود / لایت مود  
- 🔍 جستجو و دسته‌بندی محصولات  
- 🧩 ساختار پروژه‌ی ماژولار و قابل گسترش  
- ✅ فرم معتبرسازی‌شده با `react-hook-form + zod`  
- 🚧 مدیریت خطاها با `ErrorBoundary`  
- 💅 فونت سفارشی، استایلینگ تمیز با `styled()`
-
-</div>
+ ⚛️ Built with React + TypeScript  
+ 🎨 Responsive design using Material UI 6  
+ 🌙 Supports dark mode / light mode  
+ 🔍 Product search and categorization  
+ 🧩 Modular and scalable project structure  
+ ✅ Validated forms using `react-hook-form + zod`  
+ 🚧 Error management with `ErrorBoundary`  
+ 💅 Custom fonts and clean styling with `styled()`
