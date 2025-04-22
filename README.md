@@ -18,18 +18,5 @@
  ✅ فرم معتبرسازی‌شده با `react-hook-form + zod`  
  🚧 مدیریت خطاها با `ErrorBoundary`  
  💅 فونت سفارشی، استایلینگ تمیز با `styled()`
----
 
-### Run
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm run dev
-```
+</div>
