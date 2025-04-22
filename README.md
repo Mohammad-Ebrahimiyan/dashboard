@@ -12,6 +12,7 @@ This dashboard provides features like user information display, profile editing,
  ⚛️ Built with React + TypeScript  
  🎨 Responsive design using Material UI 6  
  🌙 Supports dark mode / light mode  
+ 🧭 Client-side routing with `react-router`
  🔍 Product search and categorization  
  🧩 Modular and scalable project structure  
  ✅ Validated forms using `react-hook-form + zod`  
