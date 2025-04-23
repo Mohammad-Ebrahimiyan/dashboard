@@ -1,5 +1,5 @@
 const errorPage = () => {
-    return <h2>ورود به حساب کاربری 🔐</h2>;
+    return <h2>صفحه Error Page</h2>;
   };
   
   export default errorPage;

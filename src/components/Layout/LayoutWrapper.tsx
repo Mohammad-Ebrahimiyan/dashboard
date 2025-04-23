@@ -2,7 +2,7 @@ import { UserProfileForm } from "../../forms/UserProfileForm/UserProfileForm";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import { Box, styled } from "@mui/material";
-import UserList from "../UI/UserList";
+// import UserList from "../UI/UserList";
 
 const LayoutContainer = styled(Box)(({ theme }) => ({
   position: "sticky",
@@ -23,10 +23,10 @@ const LayoutWrapper = ({ children }: { children?: React.ReactNode }) => {
       <Header />
       <LayoutContainer>
         <Sidebar />
-        <Box sx={{ flex: 1, p: 2 }}>
+        {/* <Box sx={{ flex: 1, p: 2 }}> */}
           {/* اینجا لیست کاربران را نمایش می‌دهیم */}
-          <UserList />
-        </Box>
+          {/* <UserList /> */}
+        {/* </Box> */}
         <MainContent>{children}</MainContent>
         <UserProfileForm />
       </LayoutContainer>
