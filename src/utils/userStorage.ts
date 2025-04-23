@@ -1,13 +1,17 @@
 import { User } from "../types/user";
+import {users as defaultUsers} from '../data/users'
 
 const STORAGE_KEY = "fitland_users";
 
 // گرفتن همه کاربران
 export const getUsers = (): User[] => {
-  const data = localStorage.getItem(STORAGE_KEY);
-  return data ? JSON.parse(data) : [];
-};
-
+    const data = localStorage.getItem(STORAGE_KEY);
+    if (!data) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultUsers)); // مقدار اولیه
+      return defaultUsers;
+    }
+    return JSON.parse(data);
+  };
 // افزودن کاربر جدید
 export const addUser = (user: Omit<User, "id">): { success: boolean; message: string } => {
     const users = getUsers();

@@ -1,9 +1,3 @@
-// export interface User {
-//     id: number;
-//     fullName: string;
-//     phone: string;
-//     email?: string;
-//   }
 
   import {User} from '../types/user'
 

@@ -1,118 +1,70 @@
+// src/pages/auth/Login.tsx
 import React, { useState } from "react";
 import {
   Box,
   Button,
-  Checkbox,
   Container,
   TextField,
   Typography,
-  FormControlLabel,
   Paper,
   Alert,
 } from "@mui/material";
-import { addUser } from "../../utils/userStorage"; // تابع افزودن
+import { getUsers } from "../../utils/userStorage";
 import { useNavigate } from "react-router-dom";
 
-const LoginPage = () => {
-  const [fullName, setFullName] = useState("");
+const Login = () => {
   const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [accepted, setAccepted] = useState(false);
-  const navigate = useNavigate();
   const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!fullName || !phone || !accepted) {
-      setError("لطفاً همه فیلدهای اجباری را تکمیل کرده و قوانین را بپذیرید.");
+
+    const users = getUsers();
+    const foundUser = users.find((user) => user.phone === phone);
+
+    if (!foundUser) {
+      setError("کاربری با این شماره یافت نشد.");
       return;
     }
 
-    const result = addUser({ fullName, phone, email });
-
-    if (!result.success) {
-      setError(result.message); // مثلا: شماره قبلاً ثبت شده
-      return;
-    }
-
+    // فرضا توکن فیک یا نشونه‌ای از ورود کاربر:
+    localStorage.setItem("current_user", JSON.stringify(foundUser));
     setError(null);
-    navigate("/");
+    navigate("/"); // برگشت به داشبورد یا هر صفحه دلخواه
   };
 
   return (
     <Container maxWidth="xs" sx={{ mt: 4 }}>
-      <Paper elevation={3} sx={{ borderRadius: 3, p: 4 }}>
-        <Typography variant="h5" align="right" fontWeight="bold" mb={3}>
-          ثبت‌نام
+      <Paper elevation={3} sx={{ p: 4, borderRadius: 3 }}>
+        <Typography variant="h5" align="center" mb={3} fontWeight="bold">
+          ورود
         </Typography>
 
         <Box
           component="form"
-          onSubmit={handleSubmit}
-          noValidate
-          autoComplete="off"
+          onSubmit={handleLogin}
           display="flex"
           flexDirection="column"
           gap={2}
         >
           <TextField
-            label="نام و نام خانوادگی *"
-            fullWidth
-            placeholder="نام خود را وارد کنید"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
-          />
-
-          <TextField
-            label="شماره تلفن همراه *"
-            fullWidth
-            placeholder="09*********"
+            label="شماره تلفن"
+            placeholder="مثلاً: 09123456789"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
-          />
-
-          <TextField
-            label="ایمیل (اختیاری)"
             fullWidth
-            placeholder="Example@gmail.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
           />
 
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={accepted}
-                onChange={() => setAccepted(!accepted)}
-              />
-            }
-            label={
-              <Typography variant="body2" sx={{ direction: "rtl" }}>
-                قوانین و <span style={{ color: "#1565c0" }}>مقررات</span> را
-                خوانده و قبول دارم.
-              </Typography>
-            }
-            sx={{ alignSelf: "start", mt: 1 }}
-          />
-
-          <Button
-            type="submit"
-            variant="contained"
-            color="warning"
-            size="large"
-            sx={{ fontWeight: "bold", mt: 2, borderRadius: 2 }}
-          >
-            تایید
+          <Button type="submit" variant="contained" color="primary">
+            ورود
           </Button>
-          {error && (
-            <Alert severity="error" sx={{ mt: 2 }}>
-              {error}
-            </Alert>
-          )}
+
+          {error && <Alert severity="error">{error}</Alert>}
         </Box>
       </Paper>
     </Container>
   );
 };
 
-export default LoginPage;
+export default Login;
