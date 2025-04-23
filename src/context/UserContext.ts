@@ -1,11 +1,13 @@
 import { createContext } from "react";
 
 export interface UserContextType {
-  name: string;
+  fullName: string; 
+  phone: string; 
   email: string;
-  avatarSrc: string;
+  gender: string; 
+  nationalCode: string; 
+  avatarSrc: string; 
 }
-
 export interface UserContextValue {
   user: UserContextType;
   setUser: (user: UserContextType) => void;

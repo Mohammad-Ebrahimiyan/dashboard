@@ -1,16 +1,67 @@
+import { User } from "../types/user"; 
 
-  import {User} from '../types/user'
-
-  export const users: User[] = [
-    { id: 1, fullName: "مهسا شیرین‌زبان", phone: "09123456789", email: "mahsashirinzaban751@gmail.com" },
-    { id: 2, fullName: "علی رضایی", phone: "09121234567", email: "ali.rezaei@example.com" },
-    { id: 3, fullName: "زهرا محمدی", phone: "09137894512", email: "zahra.mohammadi@example.com" },
-    { id: 4, fullName: "حسین کریمی", phone: "09353452233", email: "hossein.karimi@example.com" },
-    { id: 5, fullName: "مریم کاظمی", phone: "09190011223", email: "maryam.kazemi@example.com" },
-    { id: 6, fullName: "رضا موسوی", phone: "09350001122", email: "reza.mousavi@example.com" },
-    { id: 7, fullName: "نگار امینی", phone: "09181122334", email: "negar.amini@example.com" },
-    { id: 8, fullName: "مجتبی اکبری", phone: "09123334455", email: "mojtaba.akbari@example.com" },
-    { id: 9, fullName: "سمانه حسینی", phone: "09212233445", email: "samaneh.hosseini@example.com" },
-    { id: 10, fullName: "کامران شریفی", phone: "09387765432", email: "kamran.sharifi@example.com" },
-  ];
-  
+export const users: User[] = [
+  {
+    id: 1,
+    fullName: "مهسا شیرین‌زبان",
+    phone: "09123456789",
+    email: "mahsashirinzaban751@gmail.com",
+    gender: "زن",
+    nationalCode: "1234567890",
+    avatarSrc: "/path/to/avatar1.jpg",
+  },
+  {
+    id: 2,
+    fullName: "علی رضایی",
+    phone: "09121234567",
+    email: "ali.rezaei@example.com",
+    gender: "مرد",
+    nationalCode: "9876543210",
+    avatarSrc: "/path/to/avatar2.jpg",
+  },
+  {
+    id: 3,
+    fullName: "زهرا محمدی",
+    phone: "09137894512",
+    email: "zahra.mohammadi@example.com",
+    gender: "زن",
+    nationalCode: "1234567890",
+    avatarSrc: "/path/to/avatar3.jpg",
+  },
+  {
+    id: 4,
+    fullName: "حسین کریمی",
+    phone: "09353452233",
+    email: "hossein.karimi@example.com",
+    gender: "مرد",
+    nationalCode: "1122334455",
+    avatarSrc: "/path/to/avatar4.jpg",
+  },
+  {
+    id: 5,
+    fullName: "مریم کاظمی",
+    phone: "09190011223",
+    email: "maryam.kazemi@example.com",
+    gender: "مرد",
+    nationalCode: "4122334455",
+    avatarSrc: "/path/to/avatar4.jpg",
+  },
+  {
+    id: 6,
+    fullName: "رضا موسوی",
+    phone: "09490011223",
+    email: "reza.mousavi@example.com",
+    gender: "مرد",
+    nationalCode: "9122334455",
+    avatarSrc: "/path/to/avatar4.jpg",
+  },
+  {
+    id: 7,
+    fullName: "نگار امینی",
+    phone: "09181122334",
+    email: "negar.amini@example.com",
+    gender: "زن",
+    nationalCode: "9122334455",
+    avatarSrc: "/path/to/avatar4.jpg",
+  },
+];

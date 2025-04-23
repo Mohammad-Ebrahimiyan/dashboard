@@ -10,28 +10,37 @@ import {
   Paper,
   Alert,
 } from "@mui/material";
-import { addUser } from "../../utils/userStorage"; // تابع افزودن
+import { addUser } from "../../utils/userStorage"; 
 import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [gender, setGender] = useState(""); 
+  const [nationalCode, setNationalCode] = useState("");
   const [accepted, setAccepted] = useState(false);
   const navigate = useNavigate();
   const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!fullName || !phone || !accepted) {
+    if (!fullName || !phone || !gender || !nationalCode || !accepted) {
       setError("لطفاً همه فیلدهای اجباری را تکمیل کرده و قوانین را بپذیرید.");
       return;
     }
 
-    const result = addUser({ fullName, phone, email });
+    const result = addUser({
+      fullName,
+      phone,
+      email,
+      gender,
+      nationalCode,
+      avatarSrc: "/default-avatar.jpg",
+    });
 
     if (!result.success) {
-      setError(result.message); // مثلا: شماره قبلاً ثبت شده
+      setError(result.message); 
       return;
     }
 
@@ -77,6 +86,22 @@ const SignUp = () => {
             placeholder="Example@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <TextField
+            label="جنسیت"
+            fullWidth
+            placeholder="مرد / زن"
+            value={gender}
+            onChange={(e) => setGender(e.target.value)}
+          />
+
+          <TextField
+            label="کد ملی"
+            fullWidth
+            placeholder="کد ملی خود را وارد کنید"
+            value={nationalCode}
+            onChange={(e) => setNationalCode(e.target.value)}
           />
 
           <FormControlLabel
