@@ -3,9 +3,10 @@ import { createBrowserRouter } from "react-router-dom";
 import LayoutWrapper from "../components/Layout/LayoutWrapper";
 import DashboardPage from "../pages/dashboard/Dashboard";
 import SignUp from "../pages/auth/SignUp";
-import ErrorPage from "../pages/Error/errorPage";
+import ErrorPage from "../pages/error/errorPage";
 import UserList from "../components/UI/UserList";
 import Login from "../pages/auth/Login";
+import HomePage from '../pages/home/HomePage'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
 {
   path:'users',
   element:<UserList />
+},
+{
+  path:'homePage',
+  element:<HomePage />
 },
   {
     path: "/",

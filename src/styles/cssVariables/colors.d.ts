@@ -6,7 +6,7 @@ export type CssMainColor =
   | "lightBlue"
   | "crimsonRed"
   | "lightPink"
-   "darkGreen"
+  | "darkGreen"
   | "plateGreen"
   | "mintGreen"
   | "skyBlue"
