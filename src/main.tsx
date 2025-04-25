@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import './styles/cssVariables/cssVariables.css'
 import './index.css'
 import { UserProvider } from './context/UserProvider'
 import { ThemeProvider } from './context/ThemeProvider.tsx';  

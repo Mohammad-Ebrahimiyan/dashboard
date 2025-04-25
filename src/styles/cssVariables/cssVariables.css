@@ -1,0 +1,42 @@
+:root {
+    /* Primary Theme Colors */
+    --primary: #f4511e;
+    --secondary: #1565c0;
+    --white: white;
+  
+    /* Background Colors */
+    --bg-default-light: #f9f9f9;
+    --bg-paper-light: #ffffff;
+    --bg-default-dark: #121212;
+    --bg-paper-dark: #1e1e1e;
+  
+    /* Gray and Text Colors */
+    --text-main: #424242;
+    --text-muted: #9e9e9e;
+    --light-gray: #e6e6e6;
+  
+    /* Icon Colors */
+    --warm-orange: #ffa726; 
+    --charcoal-gray: #37474f; 
+  
+    /* Chip States */
+    --chip-active-text: #0068d1;
+    --chip-active-bg: #ebf5ff;
+  
+    --chip-hold-text: #cc0f35;
+    --chip-hold-bg: #feecf0;
+  
+    --chip-acquired-text: #11825c;
+    --chip-acquired-bg: #edfdf7;
+
+  /* chip-text-active-color */
+  --royal-blue: #0068d1;
+  /* chip-bg-active-color */
+  --ice-blue: #ebf5ff;
+
+  --gray-f5: #f5f5f5;
+  --orange-main: #f4511e;
+  --black: #000;
+  --dark-gray: #424242
+  }
+  

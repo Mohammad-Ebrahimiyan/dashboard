@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useUser } from "../../context/useUser";
-import avatarSrc from '../../assets/images/Ellipse3758.webp';
+import avatarSrc from "../../assets/images/Ellipse3758.webp";
 
 import {
   Box,
@@ -31,16 +31,16 @@ const Login = () => {
     }
 
     localStorage.setItem("current_user", JSON.stringify(foundUser));
-     setUser({
-        fullName: foundUser.fullName,
+    setUser({
+      fullName: foundUser.fullName,
       phone: foundUser.phone,
       email: foundUser.email || "",
-      gender: foundUser.gender || "نامشخص", 
-      nationalCode: foundUser.nationalCode || "0000000000", 
-      avatarSrc: avatarSrc, 
-     });
+      gender: foundUser.gender || "نامشخص",
+      nationalCode: foundUser.nationalCode || "0000000000",
+      avatarSrc: avatarSrc,
+    });
     setError(null);
-    navigate("/"); 
+    navigate("/");
   };
 
   return (

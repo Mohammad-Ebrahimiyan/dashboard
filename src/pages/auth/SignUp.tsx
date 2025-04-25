@@ -10,14 +10,14 @@ import {
   Paper,
   Alert,
 } from "@mui/material";
-import { addUser } from "../../utils/userStorage"; 
+import { addUser } from "../../utils/userStorage";
 import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [gender, setGender] = useState(""); 
+  const [gender, setGender] = useState("");
   const [nationalCode, setNationalCode] = useState("");
   const [accepted, setAccepted] = useState(false);
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ const SignUp = () => {
     });
 
     if (!result.success) {
-      setError(result.message); 
+      setError(result.message);
       return;
     }
 

@@ -1,5 +1,6 @@
 import { styled, InputBase } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import { cssMainColors } from "../../styles/cssVariables/cssVariables";
 
 const Search = styled("div")(({ theme }) => ({
   direction: "rtl",
@@ -7,7 +8,7 @@ const Search = styled("div")(({ theme }) => ({
   backgroundColor:
     theme.palette.mode === "dark"
       ? theme.palette.background.paper
-      : "#f5f5f5", 
+      : cssMainColors.grayF5, 
   width: "100%",
   display: "flex",
   flexDirection: "row-reverse",
@@ -16,7 +17,7 @@ const Search = styled("div")(({ theme }) => ({
 
 const SearchIconWrapper = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 1),
-  color: theme.palette.mode === "dark" ? "#f4511e" : "#f4511e", 
+  color: theme.palette.mode === "dark" ? cssMainColors.orangeMain : cssMainColors.orangeMain , 
   display: "flex",
   alignItems: "center",
 }));
@@ -27,7 +28,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: theme.palette.text.primary, 
   },
   "& .MuiInputBase-input::placeholder": {
-    color: theme.palette.mode === "dark" ? theme.palette.text.secondary : "#000", 
+    color: theme.palette.mode === "dark" ? theme.palette.text.secondary : cssMainColors.black, 
   },
 }));
 

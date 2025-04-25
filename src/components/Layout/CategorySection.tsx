@@ -1,6 +1,6 @@
 import { Box, Button, styled } from "@mui/material";
 import { specialCategories, mainCategories } from "../../constants/HeaderItem";
-
+import { cssMainColors } from "../../styles/cssVariables/cssVariables";
 const CategoryContainer = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
   marginTop: "40px",
@@ -33,13 +33,9 @@ const CategorySection = () => {
               key={index}
               size="small"
               endIcon={
-                index === 0 ? (
-                  <span style={{ color: "#f4511e" }}>⭐</span>
-                ) : index === 1 ? (
-                  <span style={{ color: "#f4511e" }}>⚡</span>
-                ) : (
-                  <span style={{ color: "#f4511e" }}>🎯</span>
-                )
+                <span style={{ color: cssMainColors.warmOrange }}>
+                  {index === 0 ? "⭐" : index === 1 ? "⚡" : "🎯"}
+                </span>
               }
             >
               {cat}

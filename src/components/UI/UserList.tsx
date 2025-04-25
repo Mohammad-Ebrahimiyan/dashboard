@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 import { useUsers } from "../../hooks/useUsers";
-
+import { cssMainColors } from "../../styles/cssVariables/cssVariables";
 const UserList = () => {
   const { users, deleteUser, error } = useUsers();
 
@@ -23,7 +23,7 @@ const UserList = () => {
           borderRadius={2}
         >
           <Typography>{user.name}</Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color={cssMainColors.secondary}>
             {user.email}
           </Typography>
           <Button variant="outlined" color="error" onClick={() => deleteUser(user.id)}>
