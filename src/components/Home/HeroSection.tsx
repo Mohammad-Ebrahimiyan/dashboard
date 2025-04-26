@@ -58,12 +58,12 @@ const HeroSection = () => {
         display="flex"
         flexDirection="column"
         gap={4}
-        sx={{ direction: "rtl" }}
+        sx={{ direction: "rtl"}}
       >
         <StatItem
           icon={
             <StorefrontIcon
-              sx={{ color: cssMainColors.primary, fontSize: 30 }}
+              sx={{ color: cssMainColors.primary, fontSize: 45, padding:'10px 8px 3px 5px' }}
             />
           }
           value="+۳۰۰"
@@ -72,7 +72,7 @@ const HeroSection = () => {
         <StatItem
           icon={
             <ThumbUpAltOutlinedIcon
-              sx={{ color: cssMainColors.primary, fontSize: 30 }}
+              sx={{ color: cssMainColors.primary, fontSize: 45, padding:'10px 8px 3px 5px' }}
             />
           }
           value="۹۵٪"
@@ -81,7 +81,7 @@ const HeroSection = () => {
         <StatItem
           icon={
             <CalendarTodayOutlinedIcon
-              sx={{ color: cssMainColors.primary, fontSize: 30 }}
+              sx={{ color: cssMainColors.primary, fontSize: 45, padding:'10px 8px 3px 5px' }}
             />
           }
           value="۴ روز"
