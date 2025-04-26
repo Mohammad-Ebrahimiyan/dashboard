@@ -2,7 +2,7 @@
 import { Container } from "@mui/material";
 import Header from "../../components/Layout/Header";
 import HeroSection from "../../components/Home/HeroSection";
-import PromoSection from "../../components/Home/PromoSection";
+import PromoProducts from "../../components/Home/PromoProducts";
 
 const HomePage = () => {
   return (
@@ -10,7 +10,7 @@ const HomePage = () => {
       <Header />
       <Container maxWidth="xl">
         <HeroSection />
-        <PromoSection />
+        <PromoProducts /> 
       </Container>
     </>
   );
