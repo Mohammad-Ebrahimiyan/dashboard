@@ -2,6 +2,7 @@
 import { Container } from "@mui/material";
 import Header from "../../components/Layout/Header";
 import HeroSection from "../../components/Home/HeroSection";
+import PromoSection from "../../components/Home/PromoSection";
 
 const HomePage = () => {
   return (
@@ -9,7 +10,7 @@ const HomePage = () => {
       <Header />
       <Container maxWidth="xl">
         <HeroSection />
-        {/* 👇 ادامه کامپوننت‌های صفحه اصلی */}
+        <PromoSection />
       </Container>
     </>
   );
