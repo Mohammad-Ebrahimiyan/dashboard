@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 
 import { styled } from "@mui/system";
 import { cssMainColors } from "../../styles/cssVariables/cssVariables";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward"; // آیکون مشاهده همه
 
 interface ProductItem {
   image: string;
@@ -16,14 +17,20 @@ interface PromoSectionProps {
   description: string;
   buttonText: string;
   products: ProductItem[];
+  backgroundColor?: string;
+  titleBackground?: boolean;
+  titleAlign?: string;
 }
 
-const PromoBox = styled(Box)(({ theme }) => ({
-  padding: "60px 0",
-  [theme.breakpoints.down("md")]: {
-    textAlign: "center",
-  },
-}));
+const PromoBox = styled(Box)<{ backgroundColor?: string }>(
+  ({ theme, backgroundColor }) => ({
+    backgroundColor: backgroundColor || theme.palette.background.paper,
+    padding: "50px 10px",
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+    },
+  })
+);
 
 const ProductCard = styled(Box)(({ theme }) => ({
   borderRadius: 20,
@@ -57,23 +64,44 @@ const DiscountTag = styled(Box)(({ theme }) => ({
   borderBottomRightRadius: 40,
 }));
 
-export const PromoSection = ({
+const Title = styled(Typography)(({ theme }) => ({
+  background: cssMainColors.primary, // تغییر رنگ پس‌زمینه
+  color: "#fff", // رنگ متن
+  padding: "8px", // فضای داخل
+  borderRadius: "8px",
+  textAlign: "center", // مرکز چین
+  marginBottom: "16px", // فضای پایین
+  display: "flex", // نمایش عنوان و آیکون به صورت کنار هم
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "10px", // فاصله بین عنوان و آیکون
+}));
+
+const PromoSection = ({
   title,
   description,
   buttonText,
   products,
+  backgroundColor,
+  titleBackground,
+  titleAlign,
 }: PromoSectionProps) => {
   return (
-    <PromoBox>
+    <PromoBox backgroundColor={backgroundColor}>
       <Grid container spacing={4} alignItems="center">
         <Grid item xs={12} md={4} sx={{ ml: { md: "auto" } }}>
-          <Typography variant="h5" fontWeight="bold" color="text.primary" mb={2}>
+        <Title variant="h5" fontWeight="bold">
             {title}
-          </Typography>
+            {/* <ArrowForwardIcon sx={{ fontSize: "1.2rem", color: "#fff" }} /> */}
+          </Title>
           <Typography variant="body2" color="text.secondary" mb={3}>
             {description}
           </Typography>
-          <Button variant="contained" color="warning" sx={{ borderRadius: 2, px: 4 }}>
+          <Button
+            variant="contained"
+            color="warning"
+            sx={{ borderRadius: 2, px: 4 }}
+          >
             {buttonText}
           </Button>
         </Grid>
@@ -83,7 +111,7 @@ export const PromoSection = ({
             <ProductCard>
               <ProductImage src={product.image} alt={product.title} />
               <DiscountTag>
-                {product.title} <br />
+                {product.title}
                 <span style={{ color: cssMainColors.crimsonRed }}>
                   {product.discount}
                 </span>

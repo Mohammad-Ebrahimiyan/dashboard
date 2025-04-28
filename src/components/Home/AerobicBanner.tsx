@@ -1,24 +1,25 @@
 // src/components/Home/AerobicBanner.tsx
 import { Box, Button, Grid, Typography } from "@mui/material";
-import { margin, styled } from "@mui/system";
+import {  styled } from "@mui/system";
 import { pinkWoman } from "../../assets/images/index"; // مسیر عکس بک‌گراندت اینجا تغییر بده اگر فرق داشت
 import { cssMainColors } from "../../styles/cssVariables/cssVariables";
 
 const Background = styled(Box)(({ theme }) => ({
   backgroundImage: `url(${pinkWoman})`,
-//   backgroundSize: "cover",
-//   backgroundPosition: "center",
+  backgroundSize: "contain",
+  backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
-  minHeight: 400,
-  borderRadius: 16,
+  minHeight: 650,
+//   borderRadius: 16,
   padding: theme.spacing(6),
   display: "flex",
-  alignItems: "center",
+//   alignItems: "center",
   justifyContent: "right",
   [theme.breakpoints.down("md")]: {
     padding: theme.spacing(4),
     minHeight: 300,
   },
+  marginBottom:'60px'
 }));
 
 const ContentBox = styled(Box)(({ theme }) => ({
