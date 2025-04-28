@@ -40,3 +40,4 @@ export const darkTheme: Theme = createTheme({
   },
   ...baseTypography,
 });
+
