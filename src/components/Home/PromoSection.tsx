@@ -10,6 +10,9 @@ interface ProductItem {
   image: string;
   title: string;
   discount: string;
+  price: string;
+  sizes: string[];
+  colors: string[];
 }
 
 interface PromoSectionProps {
@@ -64,7 +67,7 @@ const DiscountTag = styled(Box)(({ theme }) => ({
   borderBottomRightRadius: 40,
 }));
 
-const Title = styled(Typography)(({ theme }) => ({
+const Title = styled(Typography)(() => ({
   background: cssMainColors.primary, // تغییر رنگ پس‌زمینه
   color: "#fff", // رنگ متن
   padding: "8px", // فضای داخل
@@ -83,8 +86,8 @@ const PromoSection = ({
   buttonText,
   products,
   backgroundColor,
-  titleBackground,
-  titleAlign,
+  // titleBackground,
+  // titleAlign,
 }: PromoSectionProps) => {
   return (
     <PromoBox backgroundColor={backgroundColor}>
@@ -92,7 +95,7 @@ const PromoSection = ({
         <Grid item xs={12} md={4} sx={{ ml: { md: "auto" } }}>
         <Title variant="h5" fontWeight="bold">
             {title}
-            {/* <ArrowForwardIcon sx={{ fontSize: "1.2rem", color: "#fff" }} /> */}
+            <ArrowForwardIcon sx={{ fontSize: "1.2rem", color: "#fff" }} />
           </Title>
           <Typography variant="body2" color="text.secondary" mb={3}>
             {description}
@@ -110,6 +113,11 @@ const PromoSection = ({
           <Grid item xs={12} sm={6} md={4} key={index}>
             <ProductCard>
               <ProductImage src={product.image} alt={product.title} />
+              <Box mt={2}>
+                  <Typography variant="body2">قیمت: {product.price}</Typography>
+                  <Typography variant="body2">سایزها: {product.sizes.join(", ")}</Typography>
+                  <Typography variant="body2">رنگ‌ها: {product.colors.join(", ")}</Typography>
+                </Box>
               <DiscountTag>
                 {product.title}
                 <span style={{ color: cssMainColors.crimsonRed }}>
