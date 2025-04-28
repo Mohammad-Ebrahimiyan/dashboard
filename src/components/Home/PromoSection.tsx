@@ -4,15 +4,15 @@ import Grid from "@mui/material/Grid";
 
 import { styled } from "@mui/system";
 import { cssMainColors } from "../../styles/cssVariables/cssVariables";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward"; // آیکون مشاهده همه
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward"; 
 
 interface ProductItem {
   image: string;
   title: string;
   discount: string;
-  price: string;
-  sizes: string[];
-  colors: string[];
+  price?: string;
+  sizes?: string[];
+  colors?: string[];
 }
 
 interface PromoSectionProps {
@@ -21,8 +21,9 @@ interface PromoSectionProps {
   buttonText: string;
   products: ProductItem[];
   backgroundColor?: string;
-  titleBackground?: boolean;
-  titleAlign?: string;
+  // titleBackground?: boolean;
+  // titleAlign?: string;
+  isSpecialOffers:boolean;
 }
 
 const PromoBox = styled(Box)<{ backgroundColor?: string }>(
@@ -68,16 +69,16 @@ const DiscountTag = styled(Box)(({ theme }) => ({
 }));
 
 const Title = styled(Typography)(() => ({
-  background: cssMainColors.primary, // تغییر رنگ پس‌زمینه
-  color: "#fff", // رنگ متن
-  padding: "8px", // فضای داخل
+  background: cssMainColors.primary, 
+  color: "#fff", 
+  padding: "8px", 
   borderRadius: "8px",
-  textAlign: "center", // مرکز چین
-  marginBottom: "16px", // فضای پایین
-  display: "flex", // نمایش عنوان و آیکون به صورت کنار هم
+  textAlign: "center", 
+  marginBottom: "16px", 
+  display: "flex", 
   justifyContent: "center",
   alignItems: "center",
-  gap: "10px", // فاصله بین عنوان و آیکون
+  gap: "10px", 
 }));
 
 const PromoSection = ({
@@ -86,6 +87,7 @@ const PromoSection = ({
   buttonText,
   products,
   backgroundColor,
+  isSpecialOffers = false,
   // titleBackground,
   // titleAlign,
 }: PromoSectionProps) => {
@@ -113,16 +115,22 @@ const PromoSection = ({
           <Grid item xs={12} sm={6} md={4} key={index}>
             <ProductCard>
               <ProductImage src={product.image} alt={product.title} />
-              <Box mt={2}>
-                  <Typography variant="body2">قیمت: {product.price}</Typography>
-                  <Typography variant="body2">سایزها: {product.sizes.join(", ")}</Typography>
-                  <Typography variant="body2">رنگ‌ها: {product.colors.join(", ")}</Typography>
-                </Box>
               <DiscountTag>
                 {product.title}
                 <span style={{ color: cssMainColors.crimsonRed }}>
                   {product.discount}
                 </span>
+                {isSpecialOffers && (
+                  <Box mt={2}>
+                    <Typography variant="body2">قیمت: {product.price}</Typography>
+                    <Typography variant="body2">
+                      سایزها: {product.sizes && Array.isArray(product.sizes) ? product.sizes.join(", ") : "ناموجود"}
+                    </Typography>
+                    <Typography variant="body2">
+                      رنگ‌ها: {product.colors && Array.isArray(product.colors) ? product.colors.join(", ") : "ناموجود"}
+                    </Typography>
+                  </Box>
+                )}
               </DiscountTag>
             </ProductCard>
           </Grid>

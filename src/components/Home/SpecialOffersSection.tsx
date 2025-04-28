@@ -11,6 +11,7 @@ const SpecialOffers = () => {
       backgroundColor="#FFF2EF" 
       titleBackground={true}
       titleAlign="center"
+      isSpecialOffers={true}
     />
   );
 };
