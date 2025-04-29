@@ -9,9 +9,7 @@ const SpecialOffers = () => {
       buttonText="مشاهده همه"
       products={specialOfferProducts}
       backgroundColor="#FFF2EF" 
-      titleBackground={true}
       titleAlign="center"
-      isSpecialOffers={true}
     />
   );
 };

@@ -22,9 +22,8 @@ interface PromoSectionProps {
   buttonText: string;
   products: ProductItem[];
   backgroundColor?: string;
-  // titleBackground?: boolean;
-  // titleAlign?: string;
-  isSpecialOffers: boolean;
+  titleBackground?: boolean;
+  titleAlign?: string;
 }
 
 const PromoBox = styled(Box)<{ backgroundColor?: string }>(
@@ -37,37 +36,6 @@ const PromoBox = styled(Box)<{ backgroundColor?: string }>(
   })
 );
 
-// const ProductCard = styled(Box)(({ theme }) => ({
-//   borderRadius: 20,
-//   backgroundColor: theme.palette.background.paper,
-//   overflow: "hidden",
-//   position: "relative",
-//   height: "100%",
-//   display: "flex",
-//   flexDirection: "column",
-//   justifyContent: "flex-end",
-// }));
-
-// const ProductImage = styled("img")({
-//   width: "100%",
-//   height: "auto",
-//   objectFit: "cover",
-// });
-
-// const DiscountTag = styled(Box)(({ theme }) => ({
-//   position: "absolute",
-//   bottom: 0,
-//   right: 0,
-//   left: 0,
-//   backgroundColor: theme.palette.text.primary,
-//   color: "#fff",
-//   padding: "20px",
-//   fontWeight: "bold",
-//   fontSize: "1rem",
-//   direction: "rtl",
-//   borderTopLeftRadius: 40,
-//   borderBottomRightRadius: 40,
-// }));
 
 const Title = styled(Typography)(() => ({
   background: cssMainColors.primary,
@@ -88,9 +56,10 @@ const PromoSection = ({
   buttonText,
   products,
   backgroundColor,
-  // isSpecialOffers = false,
-}: // titleBackground,
-// titleAlign,
+  // titleAlign,
+ // titleBackground,
+
+}:
 PromoSectionProps) => {
   return (
     <PromoBox backgroundColor={backgroundColor}>
