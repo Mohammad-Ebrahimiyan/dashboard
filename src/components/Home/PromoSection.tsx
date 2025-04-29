@@ -4,7 +4,8 @@ import Grid from "@mui/material/Grid";
 
 import { styled } from "@mui/system";
 import { cssMainColors } from "../../styles/cssVariables/cssVariables";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward"; 
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ProductListSection from "./ProductListSection";
 
 interface ProductItem {
   image: string;
@@ -23,7 +24,7 @@ interface PromoSectionProps {
   backgroundColor?: string;
   // titleBackground?: boolean;
   // titleAlign?: string;
-  isSpecialOffers:boolean;
+  isSpecialOffers: boolean;
 }
 
 const PromoBox = styled(Box)<{ backgroundColor?: string }>(
@@ -36,49 +37,49 @@ const PromoBox = styled(Box)<{ backgroundColor?: string }>(
   })
 );
 
-const ProductCard = styled(Box)(({ theme }) => ({
-  borderRadius: 20,
-  backgroundColor: theme.palette.background.paper,
-  overflow: "hidden",
-  position: "relative",
-  height: "100%",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "flex-end",
-}));
+// const ProductCard = styled(Box)(({ theme }) => ({
+//   borderRadius: 20,
+//   backgroundColor: theme.palette.background.paper,
+//   overflow: "hidden",
+//   position: "relative",
+//   height: "100%",
+//   display: "flex",
+//   flexDirection: "column",
+//   justifyContent: "flex-end",
+// }));
 
-const ProductImage = styled("img")({
-  width: "100%",
-  height: "auto",
-  objectFit: "cover",
-});
+// const ProductImage = styled("img")({
+//   width: "100%",
+//   height: "auto",
+//   objectFit: "cover",
+// });
 
-const DiscountTag = styled(Box)(({ theme }) => ({
-  position: "absolute",
-  bottom: 0,
-  right: 0,
-  left: 0,
-  backgroundColor: theme.palette.text.primary,
-  color: "#fff",
-  padding: "20px",
-  fontWeight: "bold",
-  fontSize: "1rem",
-  direction: "rtl",
-  borderTopLeftRadius: 40,
-  borderBottomRightRadius: 40,
-}));
+// const DiscountTag = styled(Box)(({ theme }) => ({
+//   position: "absolute",
+//   bottom: 0,
+//   right: 0,
+//   left: 0,
+//   backgroundColor: theme.palette.text.primary,
+//   color: "#fff",
+//   padding: "20px",
+//   fontWeight: "bold",
+//   fontSize: "1rem",
+//   direction: "rtl",
+//   borderTopLeftRadius: 40,
+//   borderBottomRightRadius: 40,
+// }));
 
 const Title = styled(Typography)(() => ({
-  background: cssMainColors.primary, 
-  color: "#fff", 
-  padding: "8px", 
+  background: cssMainColors.primary,
+  color: "#fff",
+  padding: "8px",
   borderRadius: "8px",
-  textAlign: "center", 
-  marginBottom: "16px", 
-  display: "flex", 
+  textAlign: "center",
+  marginBottom: "16px",
+  display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  gap: "10px", 
+  gap: "10px",
 }));
 
 const PromoSection = ({
@@ -87,15 +88,15 @@ const PromoSection = ({
   buttonText,
   products,
   backgroundColor,
-  isSpecialOffers = false,
-  // titleBackground,
-  // titleAlign,
-}: PromoSectionProps) => {
+  // isSpecialOffers = false,
+}: // titleBackground,
+// titleAlign,
+PromoSectionProps) => {
   return (
     <PromoBox backgroundColor={backgroundColor}>
       <Grid container spacing={4} alignItems="center">
         <Grid item xs={12} md={4} sx={{ ml: { md: "auto" } }}>
-        <Title variant="h5" fontWeight="bold">
+          <Title variant="h5" fontWeight="bold">
             {title}
             <ArrowForwardIcon sx={{ fontSize: "1.2rem", color: "#fff" }} />
           </Title>
@@ -111,30 +112,10 @@ const PromoSection = ({
           </Button>
         </Grid>
 
-        {products.map((product, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <ProductCard>
-              <ProductImage src={product.image} alt={product.title} />
-              <DiscountTag>
-                {product.title}
-                <span style={{ color: cssMainColors.crimsonRed }}>
-                  {product.discount}
-                </span>
-                {isSpecialOffers && (
-                  <Box mt={2}>
-                    <Typography variant="body2">قیمت: {product.price}</Typography>
-                    <Typography variant="body2">
-                      سایزها: {product.sizes && Array.isArray(product.sizes) ? product.sizes.join(", ") : "ناموجود"}
-                    </Typography>
-                    <Typography variant="body2">
-                      رنگ‌ها: {product.colors && Array.isArray(product.colors) ? product.colors.join(", ") : "ناموجود"}
-                    </Typography>
-                  </Box>
-                )}
-              </DiscountTag>
-            </ProductCard>
-          </Grid>
-        ))}
+        
+        <Grid item xs={12} md={8}>
+          <ProductListSection title={title} products={products} />
+        </Grid>
       </Grid>
     </PromoBox>
   );
