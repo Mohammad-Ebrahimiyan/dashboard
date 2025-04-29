@@ -8,9 +8,10 @@ const SpecialOffers = () => {
       description=""
       buttonText="مشاهده همه"
       products={specialOfferProducts}
-      backgroundColor="#FFF2EF" 
-      titleAlign="center"
-    />
+      backgroundColor="#FFF2EF"
+      titleBackground={true}
+      titleAlign="center" 
+         />
   );
 };
 

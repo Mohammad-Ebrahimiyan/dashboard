@@ -1,16 +1,23 @@
 // src/component/Home/ProductListSection.tsx
 import { Box, Grid, Typography } from "@mui/material";
-import ProductCard from "./ProductCard"; 
+import ProductCard from "./ProductCard";
+import { ProductItem } from "../../types/ProductItem";
 
-interface ProductItem {
-  image: string;
+// interface ProductItem {
+//   image: string;
+//   title: string;
+//   discount: string;
+//   price: string;
+//   sizes: string[];
+// }
+
+const ProductListSection = ({
+  title,
+  products,
+}: {
   title: string;
-  discount: string;
-  price: string;
-  sizes: string[];
-}
-
-const ProductListSection = ({ title, products }: { title: string, products: ProductItem[] }) => {
+  products: ProductItem[];
+}) => {
   return (
     <Box sx={{ marginBottom: "60px" }}>
       <Typography variant="h5" fontWeight="bold" mb={3} align="center">

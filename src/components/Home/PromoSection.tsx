@@ -6,15 +6,9 @@ import { styled } from "@mui/system";
 import { cssMainColors } from "../../styles/cssVariables/cssVariables";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ProductListSection from "./ProductListSection";
+import { ProductItem } from "../../types/ProductItem";
 
-interface ProductItem {
-  image: string;
-  title: string;
-  discount: string;
-  price?: string;
-  sizes?: string[];
-  colors?: string[];
-}
+
 
 interface PromoSectionProps {
   title: string;
@@ -56,9 +50,6 @@ const PromoSection = ({
   buttonText,
   products,
   backgroundColor,
-  // titleAlign,
- // titleBackground,
-
 }:
 PromoSectionProps) => {
   return (

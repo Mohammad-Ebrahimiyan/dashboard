@@ -5,6 +5,7 @@ export const promoProducts = [
     image: variant1,
     title: "جدید ترین تخفیفات فصل برند نایک",
     discount: "۵۰٪ تخفیف",
+    
   },
   {
     image: variant2,

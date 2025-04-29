@@ -4,7 +4,8 @@ import Header from "../../components/Layout/Header";
 import HeroSection from "../../components/Home/HeroSection";
 import PromoProducts from "../../components/Home/PromoProducts";
 import AerobicBanner from "../../components/Home/AerobicBanner";
-import  SpecialOffers from '../../components/Home/SpecialOffersSection'
+import SpecialOffers from "../../components/Home/SpecialOffersSection";
+import SportShoesSection from '../../components/Home/SportShoesSection'
 const HomePage = () => {
   return (
     <>
@@ -12,8 +13,9 @@ const HomePage = () => {
       <Container maxWidth="xl">
         <HeroSection />
         <PromoProducts />
-        <AerobicBanner /> 
+        <AerobicBanner />
         <SpecialOffers />
+        <SportShoesSection />
       </Container>
     </>
   );

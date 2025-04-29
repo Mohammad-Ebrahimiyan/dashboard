@@ -1,16 +1,24 @@
-// src/component/Home/ProductCard.tsx
-import { Box, Button, Typography } from "@mui/material";
+// src/components/Home/SportShoesSection.tsx
+import { Box, Grid, Typography, Button } from "@mui/material";
+import { styled } from "@mui/system";
 import { cssMainColors } from "../../styles/cssVariables/cssVariables";
-import { ProductItem } from "../../types/ProductItem";
-// interface ProductItem {
-//   image: string;
-//   title: string;
-//   discount: string;
-//   price: string;
-//   sizes: string[];
-// }
+import { SportShoesItem } from "../../types/SportShoesItem"; 
+import { sportShoesData } from "../../data/sportShoesData"; 
 
-const ProductCard = ({ product }: { product: ProductItem }) => {
+const Title = styled(Typography)(() => ({
+  background: cssMainColors.primary,
+  color: "#fff",
+  padding: "8px",
+  borderRadius: "8px",
+  textAlign: "center",
+  marginBottom: "16px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "10px",
+}));
+
+const ProductCard = ({ product }: { product: SportShoesItem }) => {
   return (
     <Box
       sx={{
@@ -26,11 +34,7 @@ const ProductCard = ({ product }: { product: ProductItem }) => {
         textAlign: "center",
       }}
     >
-      <Box
-        sx={{
-          position: "relative",
-        }}
-      >
+      <Box sx={{ position: "relative" }}>
         <img
           src={product.image}
           alt={product.title}
@@ -64,6 +68,10 @@ const ProductCard = ({ product }: { product: ProductItem }) => {
         {product.price}
       </Typography>
 
+      <Typography variant="body2" color="text.secondary" sx={{ marginBottom: 2 }}>
+        از سایز: {product.sizes?.join(", ")}
+      </Typography>
+
       <Button variant="contained" color="primary" size="small">
         مشاهده جزئیات
       </Button>
@@ -71,4 +79,21 @@ const ProductCard = ({ product }: { product: ProductItem }) => {
   );
 };
 
-export default ProductCard;
+const SportShoesSection = () => {
+  return (
+    <Box sx={{ marginBottom: "60px" }}>
+      <Title variant="h5" fontWeight="bold">
+        جدیدترین کفش های ورزشی
+      </Title>
+      <Grid container spacing={4}>
+        {sportShoesData.map((product, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <ProductCard product={product} />
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  );
+};
+
+export default SportShoesSection;
