@@ -9,7 +9,6 @@ import ProductListSection from "./ProductListSection";
 import { ProductItem } from "../../types/ProductItem";
 
 
-
 interface PromoSectionProps {
   title: string;
   description: string;

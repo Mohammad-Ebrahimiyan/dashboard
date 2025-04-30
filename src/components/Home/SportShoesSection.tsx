@@ -85,7 +85,7 @@ const SportShoesSection = () => {
       <Title variant="h5" fontWeight="bold">
         جدیدترین کفش های ورزشی
       </Title>
-      <Grid container spacing={4}>
+      <Grid container spacing={12}>
         {sportShoesData.map((product, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <ProductCard product={product} />
