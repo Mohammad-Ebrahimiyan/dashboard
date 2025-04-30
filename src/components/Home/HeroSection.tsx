@@ -89,7 +89,6 @@ const HeroSection = () => {
         />
       </Box>
 
-      {/* تصویر دونده */}
       <Box
         sx={{
           position: "relative",

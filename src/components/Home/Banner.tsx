@@ -1,7 +1,7 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { cssMainColors } from "../../styles/cssVariables/cssVariables";
-
+import {BannerProps} from '../../types/bannerProps'
 const Background = styled(Box)(({ theme }) => ({
   backgroundSize: "contain",
   backgroundPosition: "center",
@@ -29,12 +29,6 @@ const ContentBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-interface BannerProps {
-  image: string;  
-  subtitle: string; 
-  title: string; 
-  buttonText: string;  
-}
 
 const Banner = ({ image, subtitle, title, buttonText }: BannerProps) => {
   return (

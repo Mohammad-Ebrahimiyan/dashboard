@@ -6,7 +6,7 @@ import { styled } from "@mui/system";
 import { cssMainColors } from "../../styles/cssVariables/cssVariables";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ProductListSection from "./ProductListSection";
-import { ProductItem } from "../../types/ProductItem";
+import { ProductItem } from "../../types/productItem";
 
 
 interface PromoSectionProps {
@@ -53,7 +53,7 @@ const PromoSection = ({
 PromoSectionProps) => {
   return (
     <PromoBox backgroundColor={backgroundColor}>
-      <Grid container spacing={4} alignItems="center">
+      <Grid container spacing={4} alignItems="center" >
         <Grid item xs={12} md={4} sx={{ ml: { md: "auto" } }}>
           <Title variant="h5" fontWeight="bold">
             {title}

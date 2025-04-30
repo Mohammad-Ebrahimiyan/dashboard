@@ -1,9 +1,7 @@
-// src/components/Home/SportShoesSection.tsx
 import { Box, Grid, Typography, Button } from "@mui/material";
 import { styled } from "@mui/system";
 import { cssMainColors } from "../../styles/cssVariables/cssVariables";
-import { SportShoesItem } from "../../types/SportShoesItem"; 
-import { sportShoesData } from "../../data/sportShoesData"; 
+import { specialOfferData } from "../../data/specialOfferData"; 
 
 const Title = styled(Typography)(() => ({
   background: cssMainColors.primary,
@@ -18,7 +16,7 @@ const Title = styled(Typography)(() => ({
   gap: "10px",
 }));
 
-const ProductCard = ({ product }: { product: SportShoesItem }) => {
+const ProductCard = ({ product }: { product: any }) => {
   return (
     <Box
       sx={{
@@ -44,21 +42,6 @@ const ProductCard = ({ product }: { product: SportShoesItem }) => {
             objectFit: "cover",
           }}
         />
-        <Box
-          sx={{
-            position: "absolute",
-            top: 10,
-            left: 10,
-            backgroundColor: cssMainColors.crimsonRed,
-            color: "#fff",
-            padding: "5px 10px",
-            fontWeight: "bold",
-            fontSize: "1rem",
-            borderRadius: "4px",
-          }}
-        >
-          {product.discount}
-        </Box>
       </Box>
 
       <Typography variant="h6" fontWeight="bold" sx={{ marginTop: 2 }}>
@@ -79,14 +62,14 @@ const ProductCard = ({ product }: { product: SportShoesItem }) => {
   );
 };
 
-const SportShoesSection = () => {
+const SpecialOfferSection = () => {
   return (
     <Box sx={{ marginBottom: "60px" }}>
       <Title variant="h5" fontWeight="bold">
-        جدیدترین کفش های ورزشی
+        تخفیف ویژه
       </Title>
       <Grid container spacing={4} justifyContent="center">
-        {sportShoesData.map((product, index) => (
+        {specialOfferData.map((product, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <ProductCard product={product} />
           </Grid>
@@ -96,4 +79,4 @@ const SportShoesSection = () => {
   );
 };
 
-export default SportShoesSection;
+export default SpecialOfferSection;

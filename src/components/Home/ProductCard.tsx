@@ -1,7 +1,7 @@
 // src/component/Home/ProductCard.tsx
 import { Box, Button, Typography } from "@mui/material";
 import { cssMainColors } from "../../styles/cssVariables/cssVariables";
-import { ProductItem } from "../../types/ProductItem";
+import { ProductItem } from "../../types/productItem";
 // interface ProductItem {
 //   image: string;
 //   title: string;

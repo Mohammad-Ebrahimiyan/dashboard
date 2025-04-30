@@ -7,6 +7,9 @@ import AerobicBanner from "../../components/Home/AerobicBanner";
 import SpecialOffers from "../../components/Home/SpecialOffersSection";
 import SportShoesSection from '../../components/Home/SportShoesSection';
 import BikeAndSkateBanner from "../../components/Home/BikeAndSkateBanner";
+import SpecialOfferSection from "../../components/Home/SpecialOfferSection";
+import LatestProductsSection from "../../components/Home/LatestProductsSection";
+
 const HomePage = () => {
   return (
     <>
@@ -18,6 +21,8 @@ const HomePage = () => {
         <SpecialOffers />
         <SportShoesSection />
         <BikeAndSkateBanner />
+        <SpecialOfferSection />
+        <LatestProductsSection />
       </Container>
     </>
   );
