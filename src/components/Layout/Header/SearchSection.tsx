@@ -1,6 +1,6 @@
 import { styled, InputBase } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import { cssMainColors } from "../../styles/cssVariables/cssVariables";
+import { cssMainColors } from "../../../styles/cssVariables/cssVariables";
 
 const Search = styled("div")(({ theme }) => ({
   direction: "rtl",

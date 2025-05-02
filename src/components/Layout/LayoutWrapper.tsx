@@ -1,5 +1,5 @@
 import { UserProfileForm } from "../../forms/UserProfileForm/UserProfileForm";
-import Header from "./Header";
+import Header from "./Header/Header";
 import Sidebar from "./Sidebar";
 import { Box, styled } from "@mui/material";
 // import UserList from "../UI/UserList";

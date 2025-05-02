@@ -19,3 +19,7 @@ export { default as women2 } from "./women2.webp";
 export { default as mountMan } from "./mountMan.webp";
 export { default as davidBeckam } from "./davidBeckam-sport.webp";
 export { default as womanSport } from "./woman-sport.webp";
+export {default as Enamad} from './Enamad.webp';
+export {default as Enamad1} from './Enamad1.webp';
+export {default as Enamad2} from './Enamad2.webp';
+
