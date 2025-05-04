@@ -23,7 +23,7 @@ const FooterTop = () => {
         ))}
       </Stack>
 
-      <Typography variant="subtitle2" gutterBottom>
+      <Typography variant="subtitle2" gutterBottom marginLeft='210px'>
         خبرنامه فیت‌لند
       </Typography>
 
@@ -38,6 +38,9 @@ const FooterTop = () => {
         }}
         
       >
+          <Button variant="contained" color="warning" size="small">
+            ثبت
+          </Button>
         <TextField
     
           variant="outlined"
@@ -58,9 +61,6 @@ const FooterTop = () => {
             },
           }}
         />
-        <Button variant="contained" color="warning" size="small">
-          ثبت
-        </Button>
       </Stack>
     </Box>
   );

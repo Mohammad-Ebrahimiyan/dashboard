@@ -3,7 +3,7 @@ import { footerAbout } from "../../../data/footerData";
 
 const FooterLegal = () => {
   return (
-    <Box mb={6} textAlign="right" px={4}>
+    <Box mb={4} textAlign="right"  marginLeft={30}>
       <Typography variant="h6" fontWeight="bold" gutterBottom>
         فروشگاه اینترنتی فیت‌لند
       </Typography>
@@ -11,7 +11,7 @@ const FooterLegal = () => {
         variant="body2"
         color="rgba(255,255,255,0.7)"
         maxWidth={700}
-        ml="auto"
+        // ml="auto"
         lineHeight={1.8}
       >
         {footerAbout}

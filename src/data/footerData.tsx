@@ -1,5 +1,3 @@
-// src/data/footerData.ts
-
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
@@ -10,40 +8,6 @@ export const socialLinks = [
   { icon: <TelegramIcon />, href: "https://t.me" },
   { icon: <WhatsAppIcon />, href: "https://wa.me" },
   { icon: <YouTubeIcon />, href: "https://youtube.com" },
-];
-
-export const footerColumns = [
-  {
-    title: "محبوب‌ترین‌ها",
-    items: ["لباس مردانه", "کفش فوتبال", "دوچرخه", "لباس زنانه"],
-  },
-  {
-    title: "خدمات مشتریان",
-    items: [
-      "سوالات متداول",
-      "حریم خصوصی",
-      "گزارش ایراد در سایت",
-      "شرایط بازگرداندن محصول",
-    ],
-  },
-  {
-    title: "راهنمای خرید",
-    items: [
-      "راهنمای ثبت سفارش",
-      "شیوه‌های پرداخت",
-      "نحوه ارسال سفارش‌ها",
-      "نحوه پیگیری محصول",
-    ],
-  },
-  {
-    title: "اطلاعات تماس",
-    items: [
-      "نشانی: تهران - تجریش - خیابان سالور",
-      "شماره تماس: ۰۲۱-۳۴۵۶۷۸۹",
-      "ایمیل: info@fitland.com",
-      "ساعت کاری: شنبه تا چهارشنبه ۹ تا ۱۷",
-    ],
-  },
 ];
 
 export const footerAbout =
