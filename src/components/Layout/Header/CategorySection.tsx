@@ -18,9 +18,9 @@ const CategoryBox = styled(Box)({
 
 const ButtonCategory = styled(Button)(({ theme }) => ({
   color: theme.palette.text.primary,
-  fontWeight: 500,
+  // fontWeight: 500,
   fontSize: "0.85rem",
-  borderRadius: 8,
+  // borderRadius: 8,
 }));
 
 const CategorySection = () => {

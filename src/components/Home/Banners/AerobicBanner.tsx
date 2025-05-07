@@ -1,6 +1,5 @@
-// src/components/Home/AerobicBanner.tsx
 import Banner from "./Banner";
-import { aerobicBannerData } from "../../data/aerobicBannerData";
+import { aerobicBannerData } from "../../../data/aerobicBannerData";
 
 const AerobicBanner = () => {
   return (

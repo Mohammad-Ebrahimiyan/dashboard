@@ -1,5 +1,5 @@
 import Banner from "./Banner";
-import { bikeAndSkateBannerData } from "../../data/bikeAndSkateBannerData"; // وارد کردن داده‌ها
+import { bikeAndSkateBannerData } from "../../../data/bikeAndSkateBannerData"; 
 
 const BikeAndSkateBanner = () => {
   return (

@@ -1,7 +1,7 @@
 import { Box, Grid, Typography, Button } from "@mui/material";
 import { styled } from "@mui/system";
-import { newsData } from "../../data/newsData";
-import { NewsItem } from "../../types/newsItem";
+import { newsData } from "../../../data/newsData";
+import { NewsItem } from "../../../types/newsItem";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const NewsCard = styled(Box)(() => ({

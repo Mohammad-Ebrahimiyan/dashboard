@@ -1,5 +1,5 @@
 import Banner from "./Banner";
-import { campingBannerData } from "../../data/campingBannerData";
+import { campingBannerData } from "../../../data/campingBannerData";
 
 const CampingBanner = () => {
   return (

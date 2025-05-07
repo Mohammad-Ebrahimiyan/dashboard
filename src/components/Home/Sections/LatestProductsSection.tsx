@@ -1,8 +1,8 @@
 import { Box, Grid, Typography, Button } from "@mui/material";
 import { styled } from "@mui/system";
-import { cssMainColors } from "../../styles/cssVariables/cssVariables";
-import { latestProductsSectionData } from "../../data/latestProductsBannerData ";
-import { LatestProductsSectionData } from "../../types/latestProductsSectionData";
+import { cssMainColors } from "../../../styles/cssVariables/cssVariables";
+import { latestProductsSectionData } from "../../../data/latestProductsBannerData ";
+import { LatestProductsSectionData } from "../../../types/latestProductsSectionData";
 
 
 const Title = styled(Typography)(() => ({

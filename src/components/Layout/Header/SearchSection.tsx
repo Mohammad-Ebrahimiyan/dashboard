@@ -9,7 +9,7 @@ const Search = styled("div")(({ theme }) => ({
     theme.palette.mode === "dark"
       ? theme.palette.background.paper
       : cssMainColors.grayF5, 
-  width: "100%",
+  // width: "100%",
   display: "flex",
   flexDirection: "row-reverse",
   padding: "4px 16px",
@@ -22,19 +22,13 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
   alignItems: "center",
 }));
 
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
+const StyledInputBase = styled(InputBase)(() => ({
   flex: 1,
-  "& .MuiInputBase-input": {
-    color: theme.palette.text.primary, 
-  },
-  "& .MuiInputBase-input::placeholder": {
-    color: theme.palette.mode === "dark" ? theme.palette.text.secondary : cssMainColors.black, 
-  },
 }));
 
 const SearchSection = () => {
   return (
-    <Search sx={{ maxWidth: 500 }}>
+    <Search sx={{ width:450 }}>
       <StyledInputBase placeholder="جستجو" />
       <SearchIconWrapper>
         <SearchIcon />

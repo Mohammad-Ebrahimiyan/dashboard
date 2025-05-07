@@ -3,10 +3,10 @@ import { Box, Typography, Button } from "@mui/material";
 import Grid from "@mui/material/Grid";
 
 import { styled } from "@mui/system";
-import { cssMainColors } from "../../styles/cssVariables/cssVariables";
+import { cssMainColors } from "../../../styles/cssVariables/cssVariables";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import ProductListSection from "./ProductListSection";
-import { ProductItem } from "../../types/productItem";
+import ProductListSection from "../Lists/ProductListSection";
+import { ProductItem } from "../../../types/productItem";
 
 
 interface PromoSectionProps {

@@ -1,7 +1,7 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
-import { cssMainColors } from "../../styles/cssVariables/cssVariables";
-import {BannerProps} from '../../types/bannerProps'
+import { cssMainColors } from "../../../styles/cssVariables/cssVariables";
+import {BannerProps} from '../../../types/bannerProps'
 const Background = styled(Box)(({ theme }) => ({
   backgroundSize: "contain",
   backgroundPosition: "center",

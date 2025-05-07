@@ -1,7 +1,7 @@
 // src/components/Footer/FooterCopyright.tsx
-import { Grid, Divider, Typography, Box } from "@mui/material";
+import { Grid, Divider, Typography, Box, Link } from "@mui/material";
 import SecurityIcon from "@mui/icons-material/Security";
-import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import TelegramIcon from "@mui/icons-material/Telegram";
 
 const FooterCopyright = () => {
   return (
@@ -13,33 +13,51 @@ const FooterCopyright = () => {
         alignItems="center"
         justifyContent="space-between"
         pt={2}
-        px={2}
+        px={4}
       >
         <Grid item xs={12} md={6}>
-            
-          <Typography
-            variant="caption"
-            color="rgba(255,255,255,0.4)"
-            paddingLeft={15}
-          >
-            ([https://t.me/kak_mohammad] طراحی شده توسط محمد ابراهیمیان)
-          </Typography>
+          <Box display="flex" alignItems="center" ml={8}>
+            <Link
+              variant="body2"
+              color="rgba(255,255,255,0.4)"
+              pl={3}
+              href="https://t.me/kak_mohammad"
+              target="_blank"
+              underline="none"
+            >
+              [https://t.me/kak_mohammad] طراحی شده توسط محمد ابراهیمیان
+            </Link>
+            <TelegramIcon
+              sx={{
+                ml: 1,
+                color: "rgba(255,255,255,0.4)",
+                fontSize: 18,
+              }}
+            />
+          </Box>
         </Grid>
 
         <Grid item xs={12} md={6}>
-          <Typography
-            variant="body2"
-            color="rgba(255,255,255,0.4)"
-            textAlign={{ xs: "center", md: "right" }}
-            marginLeft={71}
-            paddingRight={15}
+          <Box
+            display="flex"
+            justifyContent={{ xs: "center", md: "flex-end" }}
+            alignItems="center"
+            gap={1}
+            pr={2}
+            ml={63}
+            paddingRight={11}
           >
-            .تمامی حقوق مادی و معنوی این وب‌سایت برای مجموعه فیت‌لند محفوظ می‌باشد
-          </Typography>
+            <Typography variant="body2" color="rgba(255,255,255,0.4)">
+              تمامی حقوق مادی و معنوی این وب‌سایت برای مجموعه فیت‌لند محفوظ
+              می‌باشد
+            </Typography>
+            <SecurityIcon
+              sx={{ color: "rgba(255,255,255,0.4)", fontSize: 18 }}
+            />
+          </Box>
         </Grid>
-
       </Grid>
-      </Box>
+    </Box>
   );
 };
 

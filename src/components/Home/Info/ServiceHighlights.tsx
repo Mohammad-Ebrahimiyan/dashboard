@@ -1,5 +1,5 @@
 import { Box, Grid, Typography, Paper, Stack } from "@mui/material";
-import { serviceHighlights } from "../../data/serviceHighlightsData";
+import { serviceHighlights } from "../../../data/serviceHighlightsData";
 
 const ServiceHighlights = () => {
   return (

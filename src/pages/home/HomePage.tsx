@@ -1,17 +1,18 @@
 import { Container } from "@mui/material";
-import Header from "../../components/Layout/Header/Header";
-import HeroSection from "../../components/Home/HeroSection";
-import PromoProducts from "../../components/Home/PromoProducts";
-import AerobicBanner from "../../components/Home/AerobicBanner";
-import SpecialOffers from "../../components/Home/SpecialOffersSection";
-import SportShoesSection from '../../components/Home/SportShoesSection';
-import BikeAndSkateBanner from "../../components/Home/BikeAndSkateBanner";
-import SpecialOfferSection from "../../components/Home/SpecialOfferSection";
-import LatestProductsSection from "../../components/Home/LatestProductsSection";
-import CampingBanner from "../../components/Home/CampingBanner";
-import NewsSection from "../../components/Home/NewsSection";
-import ServiceHighlights from "../../components/Home/ServiceHighlights";
-import Footer from "../../components/Layout/Footer/Footer";
+import { Header,Footer } from "../../components";
+import {
+  HeroSection,
+  PromoProducts,
+  AerobicBanner,
+  SpecialOffersSection,
+  SportShoesSection,
+  BikeAndSkateBanner,
+  SpecialOfferSection,
+  LatestProductsSection,
+  CampingBanner,
+  NewsSection,
+  ServiceHighlights
+} from '../../components/Home/index'
 
 const HomePage = () => {
   return (
@@ -21,7 +22,7 @@ const HomePage = () => {
         <HeroSection />
         <PromoProducts />
         <AerobicBanner />
-        <SpecialOffers />
+        <SpecialOffersSection />
         <SportShoesSection />
         <BikeAndSkateBanner />
         <SpecialOfferSection />

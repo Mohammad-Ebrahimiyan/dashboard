@@ -1,5 +1,5 @@
-import PromoSection from "./PromoSection";
-import { specialOfferProducts } from "../../data/specialOffersData";
+import PromoSection from "../Info/PromoSection";
+import { specialOfferProducts } from "../../../data/specialOffersData";
 
 const SpecialOffers = () => {
   return (

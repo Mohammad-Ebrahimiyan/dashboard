@@ -1,7 +1,7 @@
 import { Box, Grid, Typography, Button } from "@mui/material";
 import { styled } from "@mui/system";
-import { cssMainColors } from "../../styles/cssVariables/cssVariables";
-import { specialOfferData } from "../../data/specialOfferData"; 
+import { cssMainColors } from "../../../styles/cssVariables/cssVariables";
+import { specialOfferData } from "../../../data/specialOfferData"; 
 
 const Title = styled(Typography)(() => ({
   background: cssMainColors.primary,

@@ -1,9 +1,8 @@
-// src/components/Home/SportShoesSection.tsx
 import { Box, Grid, Typography, Button } from "@mui/material";
 import { styled } from "@mui/system";
-import { cssMainColors } from "../../styles/cssVariables/cssVariables";
-import { SportShoesItem } from "../../types/SportShoesItem"; 
-import { sportShoesData } from "../../data/sportShoesData"; 
+import { cssMainColors } from "../../../styles/cssVariables/cssVariables";
+import { SportShoesItem } from "../../../types/sportShoesItem";
+import { sportShoesData } from "../../../data/sportShoesData"; 
 
 const Title = styled(Typography)(() => ({
   background: cssMainColors.primary,

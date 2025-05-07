@@ -1,7 +1,7 @@
 // src/component/Home/ProductListSection.tsx
 import { Box, Grid, Typography } from "@mui/material";
 import ProductCard from "./ProductCard";
-import { ProductItem } from "../../types/productItem";
+import { ProductItem } from "../../../types/productItem";
 
 // interface ProductItem {
 //   image: string;

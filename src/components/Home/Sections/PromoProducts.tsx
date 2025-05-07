@@ -1,5 +1,5 @@
-import PromoSection from "./PromoSection";
-import { promoProducts } from "../../data/promoProductsData";
+import PromoSection from "./ProductSection";
+import { promoProducts } from "../../../data/promoProductsData";
 
 const PromoProducts = () => {
   return (

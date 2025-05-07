@@ -1,7 +1,7 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
-import { cssMainColors } from "../../styles/cssVariables/cssVariables";
-import { ProductItem } from "../../types/productItem";
+import { cssMainColors } from "../../../styles/cssVariables/cssVariables";
+import { ProductItem } from "../../../types/productItem";
 
 
 const ProductCard = styled(Box)(({ theme }) => ({
